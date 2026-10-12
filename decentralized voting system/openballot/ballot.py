@@ -15,7 +15,7 @@ class Ballot:
     def get_digest(self) -> bytes:
         payload = {
             "domain": "openballot:ballot:v1",
-            "voter_id": self.voter_id,
+            "voter_id": self.voter_id.lower(),
             "proposal_id": self.proposal_id,
             "choice": self.choice,
             "weight": self.weight,
